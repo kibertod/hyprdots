@@ -1,0 +1,86 @@
+{
+    "suggest.completionItemKindLabels": {
+        "variable": "",
+        "constant": "",
+        "struct": "",
+        "class": "",
+        "interface": "",
+        "text": "",
+        "enum": "",
+        "enumMember": "",
+        "color": "",
+        "property": "",
+        "field": "",
+        "unit": "",
+        "file": "",
+        "value": "",
+        "event": "",
+        "folder": "",
+        "keyword": "",
+        "snippet": "",
+        "operator": "",
+        "reference": "",
+        "typeParameter": "",
+        "function": "󰊕",
+        "default": " "
+    },
+    "suggest.floatConfig": {
+        "border": true,
+        "rounded": true,
+    },
+    "diagnostic.floatConfig": {
+        "border": true,
+        "rounded": true,
+    },
+    "signature.floatConfig": {
+        "border": true,
+        "rounded": true,
+    },
+    "hover.floatConfig": {
+        "border": true,
+        "rounded": true,
+    },
+    "outline.previewBorder": true,
+    "outline.previewBorderRounded": true,
+    "coc.preferences.formatOnSave": true,
+    "notification.border": true,
+    "inlayHint.enable": false,
+    "sql.database": "postgresql",
+    "languageserver": {
+        "csharp-ls": {
+            "command": "csharp-ls",
+            "rootPatterns": [
+                "*.csproj",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "inlayHints.enable": false
+        },
+        "clangd": {
+            "command": "clangd",
+            "args": [
+                "--compile-commands-dir=/home/kibertod/.config/suckless/dwm"
+            ],
+            "rootPatterns": [
+                "compile_commands.json",
+                ".git/"
+            ],
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ]
+        },
+        "latex": {
+            "command": "texlab",
+            "filetypes": [
+                "tex",
+                "bib",
+                "plaintex",
+                "context"
+            ]
+        }
+    },
+}
