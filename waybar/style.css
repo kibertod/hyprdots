@@ -5,8 +5,7 @@
 }
 
 window#waybar {
-    background-color: #000;
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(24, 22, 22, 0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -54,7 +53,7 @@ button:hover {
 
 #workspaces {
     transition: ease 0.5s;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color:rgba(34, 32, 32, 1);
     border-radius: 15px;
 }
 
@@ -68,12 +67,11 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button.active {
-    background-color: #FFF;
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #mode {
@@ -102,9 +100,17 @@ button:hover {
     color: #ffffff;
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
+#mpd, .modules-right {
+    padding: 0 20px;
+    background-color: rgba(34, 32, 32, 1);
+}
+
+#mpd {
+    border-radius: 0 15px 15px 0;
+}
+
+.modules-right {
+    border-radius: 15px 0 0 15px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

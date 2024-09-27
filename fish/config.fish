@@ -9,3 +9,5 @@ end
 function nvim
     kitty @ set-spacing padding=0 && /usr/bin/nvim $argv && kitty @ set-spacing padding=20
 end
+
+nitch
