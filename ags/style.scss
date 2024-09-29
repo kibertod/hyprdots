@@ -1,0 +1,261 @@
+$blue: #8ba4b0;
+$green: #8a9a7b;
+$red: #c4746e;
+$orange: #b6927b;
+$yellow: #e6c384;
+$purple: #938aa9;
+$cyan: #7aa89f;
+$background: #181616;
+$foreground: #c5c9c5;
+$border: #484848;
+$lightened: rgba(255, 255, 255, 0.1);
+
+
+* {
+    font-family: "CommitMono Nerd Font";
+}
+
+#sidebar, #calendar {
+    color: $foreground;
+    border: 1px solid $border;
+    border-radius: 10px;
+    background-color: rgba(24, 22, 22, 1);
+}
+
+button {
+    color: $foreground;
+}
+
+#vpn {
+    margin-bottom: 20px;
+    border: 1px solid $border;
+}
+
+#vpn.active {
+    border-color: $cyan;
+    color: $cyan;
+}
+
+#time {
+  font-size: 40pt;
+}
+
+#battery-icon {
+    color: $yellow;
+}
+#cpu-icon {
+    color: $red;
+}
+#mem-icon {
+    color: $green;
+}
+#temp{
+    color: $blue;
+}
+
+#lock { border: 1px solid; color: $purple;}
+#logout { border: 1px solid; color: $blue;}
+#reboot { border: 1px solid; color: $orange;}
+#poweroff { border: 1px solid; color: $red;}
+
+.power-saver { border: 1px solid $border; }
+.balanced { border: 1px solid $border; }
+.performance { border: 1px solid $border; }
+
+.power-saver-active { border: 1px solid $blue; color: $blue; }
+.balanced-active { border: 1px solid; color: $orange;}
+.performance-active { border: 1px solid; color: $red;}
+
+.power-saver:hover { border: 1px solid $blue; }
+.balanced:hover { border: 1px solid $orange; }
+.performance:hover { border: 1px solid $red; }
+
+.dropdown {
+    border: 1px solid $border;
+    border-radius: 10px;
+}
+
+.spacer {
+  color: transparent;
+}
+
+#speaker-muted {
+    border: 1px solid;
+    color: $red;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+#microphone-muted {
+    font-size: 10pt;
+    padding-right: 30px;
+    border: 1px solid;
+    color: $red;
+}
+
+#microphone-muted.active, #speaker-muted.active {
+    color: $background;
+    border-color: $red;
+    background-color: $red;
+}
+
+#microphone-slider {
+    margin-bottom: .3em;
+}
+
+trough {
+    min-height: 6px;
+    border-radius: 3px;
+    background-color: $lightened;
+}
+
+slider {
+    all: unset;
+}
+
+levelbar {
+  transition: 0.5s ease;
+}
+
+levelbar block{
+    min-height: 6px;
+    border-radius: 10px;
+}
+
+levelbar block.filled {
+    border-radius: 10px;
+}
+
+#battery-level block.filled {
+    background-color: $yellow;
+}
+
+#cpu-level block.filled {
+    background-color: $red;
+}
+
+#mem-level block.filled {
+    background-color: $green;
+}
+
+levelbar block.empty {
+    background-color: $lightened;
+    border-radius: 10px;
+}
+
+highlight {
+  all: unset;
+  border-radius: 5px;
+  background-color: $foreground;
+}
+
+.dropdown button {
+    border-radius: 7px;
+}
+
+.dropdown-items button {
+    border-radius: 0;
+    background-color: transparent;
+    color: $foreground;
+}
+
+.dropdown-items button.active {
+    background-color: $green;
+}
+
+.dropdown-toggle {
+  color: $foreground;
+}
+
+.dropdown.active .dropdown-toggle {
+  border-radius: 7px 7px 0 0;
+}
+
+button {
+    padding: 5px 20px;
+}
+ 
+.img {
+    min-width: 100px;
+    min-height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-right: 1em;
+}
+
+.player-title {
+    margin-bottom: 10px;
+    font-size: 13pt;
+}
+.player-artist {
+    opacity:0.9;
+}
+.player-album {
+    font-size: 8pt;
+    opacity: 0.7;
+}
+.player-play {
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 14pt;
+  padding: 0 30px 0 25px;
+}
+.player-prev {
+  font-size: 14pt;
+  background-color: transparent;
+  border-right: 1px solid $border;
+  border-radius: 10px 0 0 10px;
+}
+.player-next {
+  font-size: 14pt;
+  background-color: transparent;
+  border-left: 1px solid $border;
+  border-radius: 0 10px 10px 0;
+}
+.shuffle, .repeat{
+  border-radius: 10px;
+  border: 1px solid $border;
+  padding: 0 18px 0 15px;
+}
+.shuffle.active {
+  border-color: $purple;
+  color: $purple;
+}
+.repeat.active {
+  border-color: $yellow;
+  color: $yellow;
+}
+
+calendar {
+    all: unset;
+    background-color: transparent;
+    border-radius: 10px;
+    color: $foreground;
+    font-size: 11pt;
+    padding: 5px;
+
+    .header {
+      background-color: transparent;
+    }
+
+    .highlight {
+      background-color: transparent;
+      color: $orange;
+    }
+
+    :selected {
+      color: $red;
+      background-color: transparent;
+    }
+
+    :indeterminate {
+      color: $blue;
+    }
+
+    .button {
+      background-color: transparent;
+      color: $blue;
+      font-size: 13pt;
+    }
+}

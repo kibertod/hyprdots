@@ -5,24 +5,31 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+    "margin-top": 5,
+    "margin-bottom": 5,
+    "margin-left": 10,
+    "margin-right": 10,
     // Choose the order of the modules
     "modules-left": [
-        "mpd"
-    ],
-    "modules-center": [
         "hyprland/workspaces"
     ],
-    "modules-right": [
-        "custom/runcat",
-        "memory",
-        "temperature",
-        "battery",
-        "battery#bat2",
-        "keyboard-state",
-        "hyprland/language",
-        "tray",
-        "clock"
+    "modules-center": [
+        "clock",
     ],
+    "modules-right": [
+        "battery",
+        "tray",
+        "hyprland/language",
+        "custom/quick-settings"
+    ],
+    "custom/quick-settings": {
+        "format": "󰣇",
+        "on-click": "ags -t sidebar",
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "padding": 10,
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -62,7 +69,7 @@
         "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
         "format-disconnected": "Disconnected ",
         "unknown-tag": "N/A",
-        "interval": 5,
+        "interval": 1,
         "port": 7700,
         "on-click": "mpc -p 7700 toggle",
         "on-scroll-up": "mpc -p 7700 next",
@@ -100,8 +107,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M %d.%m.%Y %A}",
+        "tooltip": false,
+        "on-click": "ags -t calendar"
     },
     "cpu": {
         "format": "{usage}% ",
